@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="game"
+            type="com.example.carcards.FragmentGame" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FragmentGame">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/car_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submitButton"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/questionRadioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/porsche" />
+
+        <RadioGroup
+            android:id="@+id/questionRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <RadioButton
+                android:id="@+id/firstAnswerRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="első kocsi" />
+
+            <ImageView
+                android:id="@+id/car_image"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/porsche"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <RadioButton
+                android:id="@+id/secondAnswerRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="második kocsi" />
+
+            <ImageView
+                android:id="@+id/imageButton7"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/porsche"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <RadioButton
+                android:id="@+id/thirdAnswerRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="harmadik kocsi" />
+
+            <ImageView
+                android:id="@+id/imageButton8"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/porsche"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+            <RadioButton
+                android:id="@+id/fourthAnswerRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="negyedik kocsi" />
+
+            <ImageView
+                android:id="@+id/imageButton9"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/porsche"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="Tovább"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

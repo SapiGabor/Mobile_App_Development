@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentGameStart">
+    <fragment
+        android:id="@+id/fragmentGameStart"
+        android:name="com.example.carcards.FragmentGameStart"
+        android:label="FragmentGameStart">
+        <action
+            android:id="@+id/action_fragmentGameStart_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGame"
+        android:name="com.example.carcards.FragmentGame"
+        android:label="FragmentGame" >
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentGameWon"
+            app:destination="@id/fragmentGameWon" />
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentGameLost"
+            app:destination="@id/fragmentGameLost" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGameWon"
+        android:name="com.example.carcards.FragmentGameWon"
+        android:label="FragmentGameWon" />
+    <fragment
+        android:id="@+id/fragmentGameLost"
+        android:name="com.example.carcards.FragmentGameLost"
+        android:label="FragmentGameLost" />
+</navigation>
